@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash Board</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+<body>
+    
+    <div id="main-frontend">
+        
+        <div class="mode">
+            <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
+    
+        </div>
+        <div class="leftt">
+            <input type="text" id="cityInput" placeholder="Enter city" />
+            <button onclick="getWeather()">Search</button>
+            <div id="temperature">-- °C</div>
+        </div>
+        
+        <div class="centerr" id="clock">--:--:--</div>
+        
+        <div class="rightt" id="weekdayBlock">
+            <!-- Date list will be inserted by JavaScript -->
+        </div>
+    </div>
+    
+    <div id="main">
+    <section class="allElems">
+            <div class="todo elem" id="0">
+                <img src="https://images.unsplash.com/photo-1558369178-6556d97855d0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <h2>To do plan</h2>
+            </div>
+            <div class="Daily elem" id="1">
+                <img src="https://plus.unsplash.com/premium_photo-1705010649877-f561dd47dee9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1pbi1zYW1lLXNlcmllc3wyfHx8ZW58MHx8fHx8" alt="">
+                <h2>Daily task</h2>
+            </div>
+            <div class="Moti elem" id="2">
+                <img src="https://images.unsplash.com/photo-1512620522629-ba18bef09290?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fG1vdGl2YXRlfGVufDB8fDB8fHww" alt="">
+                <h2>Motivation Task</h2>
+            </div>
+            <div class="Pomo elem" id="3">
+                <img src="https://plus.unsplash.com/premium_photo-1725075085000-fcb2d2cc16d2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8" alt="">
+                <h2>Pomodomo Timer</h2>
+            </div>
+            
+        </section>
+    
+    
+    
+    <section class="fullElem todo-list-fullpage">
+        <button class="back" id="0">Close</button>
+        <h1>To Do Page</h1>
+
+        <div class="container">
+  <!-- LEFT SIDE INPUT -->
+  <div class="left">
+    <h2>Add New Task</h2>
+    <input type="text" id="titleInput" placeholder="Enter task title" autocomplete="off" />
+    <textarea id="descInput" rows="4" placeholder="Enter description (optional)"></textarea>
+    <button onclick="addTask()">Add Task</button>
+  </div>
+
+  <!-- RIGHT SIDE DISPLAY -->
+  <div class="right">
+    <h2>Your Tasks</h2>
+    <div class="status-text" id="statusText">0 of 0 tasks completed</div>
+    <div class="progress-bar" aria-label="Task progress">
+      <div class="progress" id="progressBar"></div>
+    </div>
+    <div id="taskList" aria-live="polite" aria-relevant="additions removals"></div>
+  </div>
+ </div>
+
+
+
+    </section>
+    
+    <section class="fullElem Daily-planner-fullpage">
+        <button class="back" id="1">Close</button>
+        <h1>plan your day to be more productive</h1>
+                <div class="day-planner">
+                    <!-- <div class="day-planner-time">
+                        <p>6:00 - 7:00</p>
+                        <input type="text" placeholder="...">
+                    </div>
+                    <div class="day-planner-time">
+                        <p>7:00 - 8:00</p>
+                        <input type="text" placeholder="...">
+                    </div> -->
+                </div>
+    </section>
+    
+    
+        <section class="fullElem motivational-fullpage">
+            <button class="back" id="2">Close</button>
+            <h1>Motivational Quote</h1>
+             <div id="head-container">
+
+        <div id="quote-container">
+            <p id="quote-text">Loading a wise quote...</p>
+            <p id="quote-author">- Someone Inspirational</p>
+            <button id="new-quote-btn">New Quote</button>
+        </div>
+    </div>
+
+        </section>
+    
+    <section class="fullElem pomodomo-fullpage" >
+        <button class="back" id="3">Close</button>
+            <h1>Pomodomo Timer</h1>
+            <div class="ring-container">
+    <svg id="progress-ring" width="300" height="300">
+      <circle r="140" cx="150" cy="150" stroke="#ddd" stroke-width="15" fill="none" />
+      <circle id="ring-progress" r="140" cx="150" cy="150" stroke-width="15" fill="none"
+        stroke-dasharray="879.64" stroke-dashoffset="0" transform="rotate(-90 150 150)" />
+    </svg>
+    <div id="timer">00:00</div>
+    <div class="flip-clock">00:00</div>
+
+    <div class="fullscreen-controls">
+      <button id="fsStartBtn">Start</button>
+      <button id="fsPauseBtn">Pause</button>
+      <button id="fsResetBtn">Reset</button>
+      <button onclick="exitFullscreen()">Exit Fullscreen</button>
+       <label>Theme:  
+         <select id="themeSelect">
+              
+             
+             <option value="green">Green</option>
+             <option value="image">My-Space</option>
+             <option value="image2">Sunset</option>
+             </select>
+       </label>
+    </div>
+  </div>
+
+  <div id="statussText">Choose a session</div>
+
+  <div id="default-input">
+    <label>Focus (min): <input type="number" id="focusInput" value="25" min="1" /></label>
+    <label>Break (min): <input type="number" id="breakInput" value="5" min="1" /></label>
+    <button onclick="applyCustomTime()">Set Time</button>
+  </div>
+  <div id="default-Time">
+
+      <button onclick="startSession(25)">Start 25 Min</button>
+      <button onclick="startSession(45)">Start 45 Min</button>
+      <button onclick="startBreak()">Manual Break</button>
+    </div>
+
+ 
+  <div class="buttonset">
+    <button onclick="startTimer()" id="letStart">Start</button>
+    <button onclick="pauseTimer()" id="letPause">Pause</button>
+    <button onclick="resetTimer()" id="letReset">Reset</button>
+    <button id="fullscreenBtn">🔳 Fullscreen</button>
+  </div>
+
+
+        </section> 
+        
+    </div>    
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
