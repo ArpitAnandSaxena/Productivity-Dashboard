@@ -7,14 +7,9 @@
     --backh1: #18230F;
     --text-color: #fff;
     --text-color2:#0e0e0e;
-
-
 }
 
-
-
-
-    [data-theme="dark"] {
+ [data-theme="dark"] {
       --backg: #1e1e1e;
       --fulscreen:#FFB200;
       --text-color: #fff;
@@ -127,19 +122,7 @@ html,body{
   opacity: 1;
 }
 
-
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-      }
-    }
-
-
-    
-
-    .container {
+  .container {
       display: flex;
       flex-direction: row;
         height: 85%;
@@ -341,22 +324,6 @@ html,body{
       transform: rotate(180deg);
     }
 
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .left, .right {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #ccc;
-      }
-
-      .right {
-        border-bottom: none;
-
-      }
-    }
 
 section.allElems{
     height: 100%;
@@ -405,13 +372,14 @@ text-align: center
     
 }
 .fullElem{
-    height: 100%;
+    height: 130%;
     width: 100%;
     background-color: var(--backg);
     padding: 40px;
     font-size: 50px;
     display: none;
     position: absolute;
+    
 }
 .back{
     position: absolute;
@@ -595,8 +563,8 @@ text-align: center
     }
     #default-input{
         position: absolute;
-      top: 30%;
-      right: 20%;
+      top: 18%;
+    right: 5%;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -644,8 +612,8 @@ text-align: center
     }
     #default-Time{
       position: absolute;
-      top: 30%;
-      left: 20%;
+      top: 18%;
+      left: 5%;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -670,12 +638,7 @@ text-align: center
 
       font-size: 20px;
     }
-    /* button, input, select {
-      padding: 10px;
-      margin: 5px;
-      font-size: 18px;
-      border: none;
-    } */
+    
 
     input[type="number"] {
       width: 60px;
@@ -778,13 +741,8 @@ text-align: center
       color: black;
     }
 
-
-
-
-
-
-
-    :root {
+/* Tablet and below (max-width: 768px) */
+:root {
   --pri: #597445;
   --sec: #265691;
   --ter: #B17457;
@@ -823,303 +781,285 @@ text-align: center
   --hovereff2: #471396;
 }
 
-/* ... Existing styles ... */
+@media screen and (max-width: 768px) {
 
-
-/* Tablet and below (max-width: 768px) */
-@media (max-width: 768px) {
-
-  /* Main frontend bar stacked vertically */
-  #main-frontend {
+  #main-frontend{
+    display: flex;
     flex-direction: column;
-    height: auto;
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .leftt, .centerr, .rightt {
-    flex: none;
+    height: 100%;
     width: 100%;
-    justify-content: center;
-    text-align: center;
+    margin: 0 auto;
   }
 
-  .leftt input {
-    width: 90%;
-    max-width: 350px;
-    font-size: 18px;
-  }
+.allElems{
+  height: 70%;
+    width: 100%;
+    padding: 20px;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    position: absolute;
 
-  .leftt button {
-    width: 90%;
-    max-width: 200px;
-    font-size: 18px;
-  }
-
-  .centerr {
+}
+.fullElem{
+    height: 330%;
+    width: 96%;
+    background-color: var(--backg);
+    padding: 40px;
     font-size: 50px;
-  }
-
-  .rightt {
-    font-size: 16px;
-    gap: 8px;
-  }
-
-  /* allElems container wraps */
-  section.fullElem {
-  display: none;           /* hide by default */
-  position: fixed;         /* fixed to viewport */
-  top: 50%;               /* center vertically */
-  left: 50%;              /* center horizontally */
-  transform: translate(-50%, -50%);  /* offset for perfect centering */
-  background: white;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow-y: auto;
-  border-radius: 8px;
+    display: none;
+    position: absolute;
+}
+.Daily-planner-fullpage h1{
+  font-size: 25px
+}
+.Daily-planner-fullpage button{
+    position: absolute;
+    right: 1%;
+    
+    background-color: red;
+    border-radius: 10px;
+    padding:5px   ;
+    border:none;
+    font-size: 15px;
+    font-weight: 500;
+    
 }
 
+.back{
+position: absolute;
+    right: 5%;
+    top:2%;
+    background-color: red;
+    border-radius: 10px;
+    padding:5px   ;
+    border:none;
+    font-size: 15px;
+    font-weight: 500;
+}
 
-  .elem {
-    width: 45%;
-    height: 280px;
-  }
-
-  /* Fullpage sections padding adjustment */
-  .fullElem {
+.Daily-planner-fullpage .day-planner {
+    background-color: #035a17;
+    height: 90%;
+    margin-top: 20px;
+    width: 104%;
+    border-radius: 5px;
     padding: 20px;
-    font-size: 30px;
-    display: none;
-  }
-
-  /* Container inside To Do fullpage stacks vertically */
-  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    align-items: flex-start;
+    justify-content: space-between;
     flex-direction: column;
-    height: auto;
-  }
 
-  .left, .right {
+
+}
+
+.Daily-planner-fullpage .day-planner .day-planner-time{
+    margin-bottom: 20px;
     width: 100%;
-    border: none;
-    padding: 15px 10px;
-  }
-
-  /* Pomodoro timer scaling */
-  .ring-container {
-    width: 220px;
-    height: 220px;
-    margin: 20px auto;
-  }
-
-  #timer {
-    font-size: 36px;
-  }
-
-   section.pomodomo-fullpage{
+    display: flex;
+    align-items: center;
     position: relative;
+}
+#quote-container {
+            background-color: #02211a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            height: 250%;
+            margin: 20px;
+            border: 5px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-wrap: break-word;  
+          
+          
+          }
 
-    height: 100%;
-  }
+          #quote-text{
+            font-size: 40px;
+          }
 
-  #progress-ring {
-      width: 150%;
-      height: 150%;
+          
+        #new-quote-btn {
+            margin-top: 20px;
+            padding: 5px 10px;
+            font-size: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .motivational-fullpage h1{
+          margin: 10px;
+          color: var(--text-color);
+          font-size: 40px;
+        }
+
+.motivational-fullpage{
+  height: 330%;
+}
+
+#default-Time{
       position: absolute;
-      top: -18%;
-      right: -30%;
+      top: 21%;
+      height:35px ;
       
-      border: none;
-       background: transparent; 
-      
-    }
-    .back h1{
-      font-size: 20px;
-    }
-
-#default-input{
-        position: absolute;
-      top: 20%;
-      right: 5%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      font-size: 15px;
-      color: var(--text-color);
-    }
-    #default-input label{
-      font-size: 15px;
-      color: var(--text-color)
-
-    }
-    #default-input button{
-      font-size: 15px;
-      padding: 10px;
-      margin: 5px 20px;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-     #default-Time{
-      position: absolute;
-      top: 20%;
-      left: 5%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    #default-Time button{
-      font-size: 15px;
-      padding: 10px;
-      margin: 5px 20px;
-      cursor: pointer;
-      border-radius: 6px;
-      color: var(--text-color);
-    }
-#focusInput{
-      color:var(--text-color);
-
-      font-size: 12px;
-    }
-    #breakInput{
-      color:var(--text-color);
-
-      font-size: 12px;
-    }
-
-    .buttonset{
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      width: 90%;
+      flex-wrap: nowrap;
       align-items: center;
+      justify-content: center;
+      gap: 20px;
     }
-    #letStart, #letPause, #letReset, #fullscreenBtn {
-    width: 20%;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    font-size: 12px;
-    padding: 12px 0;
-  }
-/* 
-  #default-input, #default-Time {
-    position: static;
-    margin: 15px auto;
-    width: 90%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
 
-  #default-input label, #default-Time button {
-    font-size: 16px;
-    flex: 1 1 130px;
-    margin: 0 10px;
-  } */
+    #default-Time button{
+      font-size: 15px;
+      padding: 5px;
+      margin: 5px 10px;
+      cursor: pointer;
+      border-radius: 6px;
+      color: var(--text-color);
+    }
 
-  .buttonset {
+    #default-input{
+        position: absolute;
+        top: 17%;
+        padding: 10px;
+        height: 35px;
+        display: flex;
+        flex-wrap: nowrap; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+        font-size: 15px;
+        margin: 10px;
+        color: var(--text-color);
+    }
+    
+#letStart, #letPause, #letReset {
+      font-size: 28px;
+      padding: 10px 30px;
+      border-radius: 15px;
+      transition: 0.3s;
+      margin-top: 200px;
+    }
+
+    #fullscreenBtn{
+      display: none;
+    }
+    
+    #default-input label{
+      color:var(--text-color);
+
+      font-size: 15px;
+    }
+    #breakInput label{
+      color:var(--text-color);
+
+      font-size: 15px;
+    }
+#default-input button{
+      font-size: 16px;
+      padding: 5px 10px;
+      margin: 5px 20px;
+      cursor: pointer;
+      
+      border-radius: 6px;
+      
+    }
+ .buttonset {
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-wrap: nowrap;
       cursor: pointer;
       flex-direction: row;
-      margin: 10px;
+      margin-top: 70px;
       gap: 10px;
     }
 
-  #letStart, #letPause, #letReset, #fullscreenBtn {
-    width: 100%;
-    font-size: 22px;
-    padding: 12px 0;
-  }
- 
-   #fullscreenBtn{
-    display: none;
-   }
-  .fullscreen-controls {
-    display: none;
-  }
+    .pomodomo-fullpage{
+      height: 330%;
+    }
+.pomodomo-fullpage h1{
+  font-size: 40px;
+
+}
+.container {
+      display: flex;
+      flex-direction: column;
+        height: 100%;
+        width: 100%;
+        gap: 2px;
+    }
+.left{
+  width: 100%;
+}
+.right{
+  width: 100%;
 }
 
-/* Mobile phones (max-width: 480px) */
-@media (max-width: 680px) {
-
-  #main-frontend {
-    padding: 10px;
-  }
-
-  .elem {
-    width: 90%;
-    height: 220px;
-  }
-
-  .centerr {
-    font-size: 38px;
-  }
-
-  .leftt input, .leftt button {
-    width: 100%;
-    max-width: none;
-  }
-
-  #temperature {
-    font-size: 30px;
-  }
-
-  .rightt {
-    font-size: 14px;
-  }
-
-  section.allElems {
-    padding: 10px;
-    gap: 15px;
-  }
-
-  .fullElem {
-    padding: 15px;
-    font-size: 24px;
-  }
-
-  .container {
-    padding: 0;
-  }
-
-  #timer {
-    font-size: 28px;
-  }
 
 
- #default-Time button:first-child{
-  display: block;
- }   
 
- #default-Time button:third-child{
-  display: none;
- }
-
-  /* #default-input label, #default-Time button {
-    font-size: 14px;
-    flex: 1 1 100%;
-    margin: 5px 0;
-  } */
-
-  .buttonset {
-    margin: 10px auto;
-    width: 100%;
-  }
-
-  #letStart, #letPause, #letReset, #fullscreenBtn {
-    font-size: 18px;
-    padding: 10px 0;
-  }
-
-  /* Smaller input width */
-  input[type="number"] {
-    width: 50px;
-  }
 }
+
+@media screen and (max-width: 480px){
+  .pomodomo-fullpage h1{
+    font-size: 25px;
+    width: 30px;
+  }
+.buttonset{
+  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-direction: row;
+}
+ #letPause{
+  margin-top: 10px;
+} #letReset{
+  margin-top: 10px;
+}
+.centerr{
+  font-size: 30px;
+}
+
+.leftt button{
+  font-size: 15px;
+}
+#temperature{
+  font-size: 30px;
+}
+.rightt{
+  font-size: 20px;
+}
+#titleInput{
+  font-size: 18px;
+}
+#descInput{
+font-size: 18px;
+}
+.day-planner .day-planner-time input{
+  font-size: 20px;
+}
+#default-input {
+        position: absolute;
+        top: 17%;
+      }
+      #default-Time {
+        position: absolute;
+        top: 21%;}
+
+} 
