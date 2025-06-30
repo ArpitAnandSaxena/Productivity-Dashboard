@@ -4,12 +4,14 @@ let fullElemPageBackBtn = document.querySelectorAll('.fullElem .back')
 allElems.forEach(function(elem){
     elem.addEventListener('click', function(){
         fullElemPage[elem.id].style.display = 'block'
+        
     })
 })
 fullElemPageBackBtn.forEach(function(back){
     back.addEventListener('click', function(){
         
         fullElemPage[back.id].style.display = 'none'
+        document.body.style.overflow = 'auto';
     })
 })
 
@@ -89,8 +91,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-  
   function toggleTheme() {
     const current = document.documentElement.getAttribute('data-theme');
     const newTheme = current === 'dark' ? 'light' : 'dark';
@@ -515,3 +515,4 @@ dailyPlanner()
     }
 
     updateUI();
+    

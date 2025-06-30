@@ -63,6 +63,7 @@ html,body{
       justify-content: space-between;
       align-items: center;
       padding: 20px;
+      height: 40%;
     }
 
     .leftt, .centerr, .rightt {
@@ -71,6 +72,7 @@ html,body{
       justify-content: center;
       align-items: center;
     }
+    
     
     .leftt {
       flex-direction: column;
@@ -146,6 +148,8 @@ html,body{
       overflow: auto;
     }
     .todo-list-fullpage{
+      height: 100%;
+      width: 100%;
       background-color: var(--card-color);
     }
     .todo-list-fullpage h1{
@@ -326,8 +330,8 @@ html,body{
 
 
 section.allElems{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     padding: 40px;
     padding-top: 80px;
     display: flex;
@@ -372,8 +376,8 @@ text-align: center
     
 }
 .fullElem{
-    height: 130%;
-    width: 100%;
+    height: 130vh;
+    width: 100vw;
     background-color: var(--backg);
     padding: 40px;
     font-size: 50px;
@@ -394,7 +398,7 @@ text-align: center
 }
 
 .Daily-planner-fullpage h1{
-    font-size: 50px;
+    font-size: 40px;
     color: var(--text-color);
 }
 .Daily-planner-fullpage .day-planner{
@@ -791,9 +795,9 @@ text-align: center
     margin: 0 auto;
   }
 
-.allElems{
+section .allElems{
   height: 70%;
-    width: 100%;
+    width: 100vw;
     padding: 20px;
     padding-top: 80px;
     display: flex;
@@ -805,14 +809,15 @@ text-align: center
 
 }
 .fullElem{
-    height: 330%;
-    width: 96%;
+    height: 145vh;
+    width: 96vw;
     background-color: var(--backg);
     padding: 40px;
     font-size: 50px;
     display: none;
     position: absolute;
 }
+
 .Daily-planner-fullpage h1{
   font-size: 25px
 }
@@ -831,7 +836,7 @@ text-align: center
 
 .back{
 position: absolute;
-    right: 5%;
+    right: 3%;
     top:2%;
     background-color: red;
     border-radius: 10px;
@@ -840,7 +845,9 @@ position: absolute;
     font-size: 15px;
     font-weight: 500;
 }
-
+.fullElem{
+  height: 225vh;
+}
 .Daily-planner-fullpage .day-planner {
     background-color: #035a17;
     height: 90%;
@@ -854,8 +861,11 @@ position: absolute;
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-
-
+    
+  }
+  
+ .centerr{
+font-size: 36px
 }
 
 .Daily-planner-fullpage .day-planner .day-planner-time{
@@ -885,7 +895,7 @@ position: absolute;
           }
 
           #quote-text{
-            font-size: 40px;
+            font-size: 30px;
           }
 
           
@@ -908,16 +918,16 @@ position: absolute;
         }
 
 .motivational-fullpage{
-  height: 330%;
+  height: 145vh;
 }
 
 #default-Time{
       position: absolute;
-      top: 21%;
+      top: 555px;
       height:35px ;
       
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: nowrap;
       align-items: center;
       justify-content: center;
@@ -935,14 +945,14 @@ position: absolute;
 
     #default-input{
         position: absolute;
-        top: 17%;
+        top: 555px;
         padding: 10px;
         height: 35px;
         display: flex;
         flex-wrap: nowrap; 
         align-items: center;
         justify-content: center;
-        flex-direction: row;
+        flex-direction: column;
         gap: 10px;
         font-size: 15px;
         margin: 10px;
@@ -950,7 +960,7 @@ position: absolute;
     }
     
 #letStart, #letPause, #letReset {
-      font-size: 28px;
+      font-size: 25px;
       padding: 10px 30px;
       border-radius: 15px;
       transition: 0.3s;
@@ -991,9 +1001,7 @@ position: absolute;
       gap: 10px;
     }
 
-    .pomodomo-fullpage{
-      height: 330%;
-    }
+    
 .pomodomo-fullpage h1{
   font-size: 40px;
 
@@ -1003,16 +1011,26 @@ position: absolute;
       flex-direction: column;
         height: 100%;
         width: 100%;
-        gap: 2px;
+        gap: 5px;
     }
 .left{
   width: 100%;
+  
 }
 .right{
   width: 100%;
 }
 
+#focusInput{
+      color:var(--text-color);
 
+      font-size: 12px;
+    }
+    #breakInput{
+      color:var(--text-color);
+
+      font-size: 12px;
+    }
 
 
 }
@@ -1022,10 +1040,25 @@ position: absolute;
     font-size: 25px;
     width: 30px;
   }
+  .fullElem{
+    width: 100vw;
+    height: 225vh;
+  }
+  .status-text{
+    font-size: 30px;
+  }
+  #main-frontend{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 100%;
+    margin: 0 auto;
+  }
 .buttonset{
   flex-wrap: wrap;
   align-items: flex-end;
   flex-direction: row;
+  margin-top: 220px;
 }
  #letPause{
   margin-top: 10px;
@@ -1056,10 +1089,74 @@ font-size: 18px;
 }
 #default-input {
         position: absolute;
-        top: 17%;
+        top: 1150px;
+        margin-top: -590px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
       }
       #default-Time {
         position: absolute;
-        top: 21%;}
-
+        top: 870px;
+        margin-top: -125px;
+      display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+      }
+      #quote-text{
+            font-size: 20px;
+            padding: auto;
+          }
+#quote-container {
+            background-color: #02211a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            height: 250%;
+            margin: 20px;
+            border: 5px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-wrap: break-word;  
 } 
+.left{
+  height: 42%;
+}
+.right{
+  height: 45%;
+}
+#titleInput{
+        font-size: 20px;
+        border: 2px solid rgb(107, 105, 105);
+        
+    }
+
+
+    #descInput{
+        font-size: 22px;
+                border: 2px solid rgb(107, 105, 105);
+      
+    }
+
+.task-actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 5px;
+    }
+
+    .task-actions button {
+      padding: 2px 5px;
+      font-size: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #fff;
+      transition: background 0.3s;
+    }
+}
