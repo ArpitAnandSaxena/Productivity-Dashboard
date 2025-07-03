@@ -40,7 +40,9 @@ A feature-rich, responsive web dashboard designed to boost productivity. This pr
 No setup needed. Just visit the live demo link above.
 
 ---
+###Screenshot of Project
 
+![image alt](https://github.com/ArpitAnandSaxena/Productivity-Dashboard/tree/4f75582591ae92b374f4e63eaf4783d7338441f0/ProductivityActivity)
 
 
 ### 📁 Folder Structure
